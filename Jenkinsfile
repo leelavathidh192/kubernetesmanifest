@@ -14,9 +14,9 @@ node {
                         //def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')
                         println "Username: ${GIT_USERNAME}"
                         println "Password: ${GIT_PASSWORD}"
-                        sh "git status"
-                        sh "git config user.email leelavathidh22@gmail.com"
-                        sh "git config user.name leelavathidh192"
+                        sh 'git config user.email "leelavathidh22@gmail.com"'
+                        sh 'git config user.name "leelavathidh192"'
+                        sh 'git status'
                         //sh "git switch master"
                         sh "cat deployment.yaml"
                         sh "sed -i 's+leelavathidh/test_repo_docker_image.*+leelavathidh/test_repo_docker_image:${DOCKERTAG}+g' deployment.yaml"
