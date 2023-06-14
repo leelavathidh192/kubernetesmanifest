@@ -14,6 +14,7 @@ node {
                         //def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')
                         println "Username: ${GIT_USERNAME}"
                         println "Password: ${GIT_PASSWORD}"
+                        sh "git --version"
                         sh 'git config user.email "leelavathidh22@gmail.com"'
                         sh 'git config user.name "leelavathidh192"'
                         sh 'git status'
